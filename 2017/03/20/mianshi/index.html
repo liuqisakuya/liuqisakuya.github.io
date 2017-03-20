@@ -10,7 +10,7 @@
     
     <title>
         
-            最近遇到的面试题 | 
+            最近遇到的面试题① | 
         
         liuqisakuya&#39;s blog
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="最近遇到的面试题 | liuqisakuya&#39;s blog">
+    <meta property="og:title" content="最近遇到的面试题① | liuqisakuya&#39;s blog">
     <meta property="og:description" content="null">
     <meta property="og:article:tag" content="面试"> 
 
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面试题"><span class="post-toc-number">1.</span> <span class="post-toc-text">面试题</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端安全方面的面试题"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端安全方面的面试题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#xss攻击"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">xss攻击</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSRF"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CSRF</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -270,7 +270,7 @@
         
     
             <p class="article-headline-p">
-                最近遇到的面试题
+                最近遇到的面试题①
             </p>
         </div>
 
@@ -329,7 +329,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=最近遇到的面试题&url=http://yoursite.com//2017/03/20/mianshi/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=最近遇到的面试题①&url=http://yoursite.com//2017/03/20/mianshi/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -338,7 +338,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=最近遇到的面试题&url=http://yoursite.com//2017/03/20/mianshi/index.html&via=liuqisakuya" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=最近遇到的面试题①&url=http://yoursite.com//2017/03/20/mianshi/index.html&via=liuqisakuya" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -380,7 +380,23 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3>
+        <p>前段时间辞职后，面试遇到的一些项目中没有接触的问题，记录在这以便日后查阅。</p>
+<hr>
+<h3 id="前端安全方面的面试题"><a href="#前端安全方面的面试题" class="headerlink" title="前端安全方面的面试题"></a>前端安全方面的面试题</h3><h4 id="xss攻击"><a href="#xss攻击" class="headerlink" title="xss攻击"></a>xss攻击</h4><p><strong>xss漏洞的全称</strong>：跨站脚本攻击(cross site scripting)。从首写字母命名的方式来看，应该取名css， 但是这样就和层叠样式表的扩展名重名了，故取名为xss。  </p>
+<p><strong>xss漏洞的原理</strong>：主要是依靠一切可能的手段，将浏览器中可以执行的脚本(javascript)植入到页面代码中，从而对用户客户端实施攻击。 </p>
+<p><strong>xss攻击的分类</strong> </p>
+<ol>
+<li>非持久型XSS:<br>这种攻击方式的注入代码是从目标服务器通过错误信息、搜索结果等等方式“反射”回来 的。而称为非持久型XSS，则是因为这种攻击方式具有一次性。攻击者通过电子邮件等方式将包含注入脚本的恶意链接发送给受害者，当受害者点击该链接时，注入脚本被传输到目标服务器上，然后服务器将注入脚本“反射”到受害者的浏览器上，从而在该浏览器上执行了这段脚本。</li>
+<li>持久型XSS:<br>   攻击脚本将被永久地存放在目标服务器的数据库和 文件中。这种攻击多见于论坛，攻击者在发帖的过程中，将恶意脚本连同正常信息一起注入到帖子的内容之中。随着帖子被论坛服务器存储下来，恶意脚本也永久地 被存放在论坛服务器的后端存储器中。当其它用户浏览这个被注入了恶意脚本的帖子的时候，恶意脚本则会在他们的浏览器中得到执行，从而受到了攻击。</li>
+</ol>
+<p><strong>防御方法</strong> </p>
+<p>1.<a href="http://mp.weixin.qq.com/s/6ChuUdOm7vej8vQ3dbC8fw" target="_blank" rel="external">输入输出的过滤和数据转义</a><br>2.<a href="http://www.ruanyifeng.com/blog/2016/09/csp.html" target="_blank" rel="external">CSP</a> ;</p>
+<hr>
+<h4 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h4><p><strong>CSRF</strong>（Cross-site request forgery），中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF。  </p>
+<p><strong>CSRF原理</strong>是指在黑客已经将代码植入受害用户的浏览器访问的页面的前提下，以“受害用户”的身份向服务端发起一个伪造的http请求，从而实现服务器来执行读写操作。</p>
+<p><a href="http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html" target="_blank" rel="external">浅谈CSRF攻击方式</a> ;</p>
+<p><strong>XSS与CSRF的区别</strong>：CSRF成功的前提用户必须登录到目标站点，且用户浏览了攻击者控制的站点。<br>与XSS最为不同一点是CSRF可以不用JS就能达到目的（GET和POST的区别）。<br>而且攻击者仅仅只需要给目标站一个请求就能成功</p>
+
     
 
     
@@ -409,7 +425,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/03/20/20170321/" id="post_nav-older" class="next-content">
+        <a href="/2016/06/17/hello-world/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -501,7 +517,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
