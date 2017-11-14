@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="liuqisakuya">
     <meta name="description" content="null">
-    <meta name="keywords" content="null,问题试">
+    <meta name="keywords" content="null,问题">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -50,7 +50,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="git需要输入账号密码的问题 | liuqisakuya&#39;s blog">
     <meta property="og:description" content="null">
-    <meta property="og:article:tag" content="问题试"> 
+    <meta property="og:article:tag" content="问题"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -313,7 +313,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/问题试/">问题试</a>
+        <a class="post_tag-link" href="/tags/问题/">问题</a>
     </ul>
     
 
@@ -380,7 +380,16 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>  今天访问Gitlab时，突然发现使用https方式执行git clone时需要输入username和password，在以前并没有这种情况，google搜了下各种解决方案并没有成功，暂时记录下来，解决后再更新</p>
+        <p>  今天访问Gitlab时，突然发现使用https方式执行git clone时需要输入username和password，在以前并没有这种情况，google搜了下各种解决方案并没有成功；<del>暂时记录下来，解决后再更新</del></p>
+<p>  出现的问题： 在https的模式下git clone需要输入账号密码， ssh不需要；</p>
+<p>  可能的原因： yarn版本有问题（无法确认）；</p>
+<p>  在https的模式下一直提示需要输入账号密码，怀疑是公司gitlab配置的问题，询问后发现权限正常，配置为可匿名访问；<br>  输入下列命令后依然无法使用；<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify false</span><br></pre></td></tr></table></figure></p>
+<p>  同时发现1.2.1版本的yarn无法正确安装package.json内gitlab上私有的地址，移除yarn后，gitclone恢复了正常，无需再次输入账号密码，但npm安装依旧会报错；</p>
+<p>  新的问题： 项目的package.json内有内网某些git的依赖，在执行yarn命令时，自动去掉了项目地址后面的版本号导致无法安装，参考<a href="https://github.com/yarnpkg/yarn/issues/2117" target="_blank" rel="external">官方issue2117</a><br>  原因是yarn的版本问题，解决办法是彻底删除后，用下列命令安装：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- -L https://yarnpkg.com/install.sh | bash</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>使用homebrew安装yarn，默认安装的是0.27.1版本，升级时需要提供/usr/local写入权限，但OSX10.11之后的版本系统文件无法改动所以放弃了；  </li>
+<li>npm安装yarn， 全局安装后，依然有问题，官网也不建议使用此方法；</li>
+</ol>
 
     
 
