@@ -10,7 +10,7 @@
     
     <title>
         
-            分类: 问题 | 
+            mac下go环境安装遇到的问题 | 
         
         liuqisakuya&#39;s blog
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="liuqisakuya">
     <meta name="description" content="null">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,问题 go环境">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 问题 | liuqisakuya&#39;s blog">
+    <meta property="og:title" content="mac下go环境安装遇到的问题 | liuqisakuya&#39;s blog">
     <meta property="og:description" content="null">
-    
+    <meta property="og:article:tag" content="问题 go环境"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -208,151 +208,239 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装编译工具链"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装编译工具链</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建自签名证书"><span class="post-toc-number">2.</span> <span class="post-toc-text">创建自签名证书</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vscode配置"><span class="post-toc-number">3.</span> <span class="post-toc-text">vscode配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#遇到的问题"><span class="post-toc-number">4.</span> <span class="post-toc-text">遇到的问题</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/06/14/20180614/">mac下go环境安装遇到的问题</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-              记录在根据官方文档配置go环境时，遇到的一些问题
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/06/14/20180614/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.jpg" width="44px" height="44px" alt="liuqisakuya's avatar">
-            </div>
-            <div>
-                <strong>liuqisakuya</strong>
-                <span>6月 14, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/日记/">日记</a>, <a class="post_category-link" href="/categories/日记/问题/">问题</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/11/09/20171109/">git需要输入账号密码的问题</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-              今天访问Gitlab时，突然发现使用https方式执行git clone时需要输入username和password，在以前并没有这种情况，go...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/11/09/20171109/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.jpg" width="44px" height="44px" alt="liuqisakuya's avatar">
-            </div>
-            <div>
-                <strong>liuqisakuya</strong>
-                <span>11月 09, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/日记/">日记</a>, <a class="post_category-link" href="/categories/日记/问题/">问题</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                mac下go环境安装遇到的问题
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>liuqisakuya</strong>
+        <span>6月 14, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/问题-go环境/">问题 go环境</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=mac下go环境安装遇到的问题&url=http://yoursite.com//2018/06/14/20180614/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=mac下go环境安装遇到的问题&url=http://yoursite.com//2018/06/14/20180614/index.html&via=liuqisakuya" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2018/06/14/20180614/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2018/06/14/20180614/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>  记录在根据官方文档配置go环境时，遇到的一些问题</p>
+<h3 id="安装编译工具链"><a href="#安装编译工具链" class="headerlink" title="安装编译工具链"></a>安装编译工具链</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<h3 id="创建自签名证书"><a href="#创建自签名证书" class="headerlink" title="创建自签名证书"></a>创建自签名证书</h3><ol>
+<li>打开应用程序“钥匙串访问”</li>
+<li>打开顶部菜单 钥匙串访问-&gt;证书助理-&gt;创建证书</li>
+<li>选择一个名称（在示例中为dlv-cert），将“Identity Type(身份类型)”设置为“Self Signed Root(自签名根证书)”，将“Certificate Type(证书类型)”设置为“Code Signing(代码签名)”，然后选择“Let me override defaults（让我覆盖默认值）”。 单击“Continue(继续)”。 您可能想将预定义的365天期间延长到3650天。</li>
+<li>单击“Continue(继续)”多次，直到进入“Specify a Location For The Certificate(指定证书的位置)”页面，然后将“Keychain to System(钥匙串设置为系统)”。</li>
+<li>如果您不能将证书存储在“System（系统）”钥匙扣中，请在“login(登录)”钥匙扣中创建，然后将其导出。 然后，您可以将其导入到“System（系统）”钥匙扣。</li>
+<li>在钥匙串中选择“系统”，你应该找到你的新证书。 使用证书的上下文菜单（不是公钥或私钥），选择“获取信息”，打开“信任”项，并将“代码签名”设置为“始终信任”。</li>
+<li>重新启动计算机</li>
+<li><p>在写go程序的时候首先创建文件夹$GOPATH/src/github.com/derekparker 并且cd 到c$GOPATH/src/github.com/derekparker目录下clone 这个项目：git clone <a href="https://github.com/derekparker/delve.git" target="_blank" rel="external">https://github.com/derekparker/delve.git</a> 并且cd delve, 运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CERT=dlv-cert make install</span><br></pre></td></tr></table></figure>
+<h3 id="vscode配置"><a href="#vscode配置" class="headerlink" title="vscode配置"></a>vscode配置</h3><p><a href="https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code" target="_blank" rel="external">参考文章</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">         <span class="attr">"name"</span>: <span class="string">"Launch"</span>,</span><br><span class="line">         <span class="attr">"type"</span>: <span class="string">"go"</span>,</span><br><span class="line">         <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">         <span class="attr">"mode"</span>: <span class="string">"debug"</span>,</span><br><span class="line">         <span class="attr">"remotePath"</span>: <span class="string">""</span>,</span><br><span class="line">         <span class="attr">"port"</span>: <span class="number">2346</span>,</span><br><span class="line">         <span class="attr">"host"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">         <span class="attr">"program"</span>: <span class="string">"$&#123;workspaceRoot&#125;/src/mymath/sqrt.go"</span>,</span><br><span class="line">         <span class="attr">"env"</span>: &#123;&#125;,</span><br><span class="line">         <span class="attr">"args"</span>: [],</span><br><span class="line">         <span class="attr">"showLog"</span>: <span class="literal">true</span>,</span><br><span class="line">         <span class="attr">"trace"</span>: <span class="literal">true</span></span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3></li>
+<li>安装证书失败，提示未知错误=-2,147,414,007<br>按照创建自签名证书中第六步之后的操作， <a href="https://support.apple.com/kb/ph25443?locale=zh_CN" target="_blank" rel="external">官方文档</a></li>
+<li>编译时报错<br>需要安装第一步中的xcode-select <a href="https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code#could-not-launch-process-exec-lldb-server-executable-file-not-found-in-path" target="_blank" rel="external">参考链接</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">could not launch process: debugserver or lldb-server not found: install XCode&apos;s command line tools or lldb-server</span><br><span class="line">Process exiting with code: 1</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/11/09/20171109/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
